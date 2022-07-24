@@ -28,10 +28,20 @@ spec:
     - jsonPath: .status.hostinfo.architecture
       name: Arch
       type: string
+    - jsonPath: .status.hostinfo.cpu1
+      name: CPU
+      type: string
+    - jsonPath: .status.hostinfo.memory1
+      name: Memory
+      type: string
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: ByoHost is the Schema for the byohosts API
+        description: TODO-OBSERVABILITY - Task1 Add kubebuilder printcolumn marker
+          for static resource footprint fields TODO-OBSERVABILITY - Task2 Add kubebuilder
+          printcolumn marker for runtime resource footprint fields ByoHost is the
+          Schema for the byohosts API TODO-OBSERVABILITY - Task3 Add kubebuilder printcolumn
+          marker for last status reported time field
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -180,6 +190,12 @@ spec:
                 properties:
                   architecture:
                     description: The Architecture reported by the host.
+                    type: string
+                  cpu1:
+                    description: TODO-OBSERVABILITY - Task1 Add static resource footprint
+                      fields Add fields for CPU, Memory
+                    type: string
+                  memory1:
                     type: string
                   osimage:
                     description: OS Image reported by the host.

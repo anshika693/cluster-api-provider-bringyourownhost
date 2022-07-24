@@ -177,6 +177,12 @@ spec:
                   architecture:
                     description: The Architecture reported by the host.
                     type: string
+                  cpu1:
+                    description: TODO-OBSERVABILITY - Task1 Add static resource footprint
+                      fields Add fields for CPU, Memory
+                    type: string
+                  memory1:
+                    type: string
                   osimage:
                     description: OS Image reported by the host.
                     type: string
